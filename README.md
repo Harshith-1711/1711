@@ -5,6 +5,242 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bookstore</title>
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: linear-gradient(to right, #8E2DE2, #4A00E0); /* Attractive gradient background */
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 15px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%; /* Position the dropdown below the button */
+    left: 0;
+    border-radius: 4px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #444; /* Change background color on hover */
+}
+
+/* Bookstore Title Section */
+.title-section {
+    text-align: center;
+    padding: 50px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    margin-bottom: 40px;
+}
+
+.title-section h1 {
+    font-size: 48px;
+}
+
+.title-section p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Main Section */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four items in one row */
+    gap: 20px;
+    padding: 20px;
+}
+
+.book-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect on Book Card */
+.book-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Slight lift effect */
+    background-color: #f1f1f1;
+}
+
+/* Different button colors for each card */
+.book-card .wishlist {
+    background-color: #e60000;
+}
+
+.book-card .read-more {
+    background-color: #0066cc;
+}
+
+.book-card .buy-now {
+    background-color: #28a745;
+}
+
+/* Hover Effects on Buttons Inside the Card */
+.book-card:hover button {
+    background-color: #444; /* Darker button background on hover */
+}
+
+.book-card img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.book-card h3 {
+    font-size: 20px;
+    margin-top: 15px;
+    background: linear-gradient(to left, #ff7e5f, #feb47b); /* Gradient color for title */
+    -webkit-background-clip: text;
+    color: transparent;
+    text-transform: uppercase; /* Uppercase for a bolder look */
+}
+
+.book-card .author {
+    font-size: 14px;
+    color: #d8b1ff; /* Subtle light lavender for author */
+    margin-top: 5px;
+}
+
+/* Author Styling Hover Effect */
+.book-card .author:hover {
+    color: #fff; /* Make it white when hovered */
+}
+
+.book-card .description {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.book-card .price {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #e60000;
+}
+
+button {
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+  </style>
 </head>
 <body>
 
@@ -139,3 +375,4 @@
 
 </body>
 </html>
+
